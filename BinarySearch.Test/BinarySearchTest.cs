@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace BinarySearch.Test
 {
@@ -9,9 +10,9 @@ namespace BinarySearch.Test
 		int[] array = { 1, 3, 5, 7 }; 
 
 		[Test]
-		public void Return_neggative_two_for_empty_array()
+		public void Throw_Arg_Exception_for_empty_array()
 		{
-			Assert.AreEqual(-2, binarySearch.BinarySearchNumber(4, empty_array));
+			Assert.Throws(typeof(ArgumentNullException), () => binarySearch.BinarySearchNumber(4, empty_array));
 		}
 
 		[Test]

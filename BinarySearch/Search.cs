@@ -1,4 +1,6 @@
-﻿namespace BinarySearch
+﻿using System;
+
+namespace BinarySearch
 {
 	public class Search
 	{
@@ -8,7 +10,7 @@
 
 			if (array.Length <= 0)
 			{
-				return -2;
+				throw new ArgumentNullException();
 			}
 
 			for (int i = 0; i < array.Length; i++)

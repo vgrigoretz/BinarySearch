@@ -1,4 +1,5 @@
-﻿namespace BinarySearch
+﻿using System;
+namespace BinarySearch
 {
 	public class BinarySearchNr
 	{
@@ -9,7 +10,7 @@
 
 			if (max <= 0)
 			{
-				return -2;
+				throw new ArgumentNullException();
 			}
 
 			while (min <= max)

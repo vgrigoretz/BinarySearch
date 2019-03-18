@@ -1,10 +1,10 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace BinarySearch.Test
 {
 	class SearchTest
 	{
-		int nr = 11;
 		int[] empty_array = { };
 		int[] array = { 1, 3, 5, 7 };
 
@@ -12,9 +12,9 @@ namespace BinarySearch.Test
 		Search search = new Search();
 
 		[Test]
-		public void Return_neggative_two_for_empty_array()
+		public void Throw_Arg_Exception_for_empty_array()
 		{
-			Assert.AreEqual(-2, search.SearchNumber(4, empty_array));
+			Assert.Throws(typeof(ArgumentNullException), () => search.SearchNumber(4, empty_array));
 		}
 
 		[Test]
